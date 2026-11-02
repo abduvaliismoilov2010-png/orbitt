@@ -1,0 +1,51 @@
+/* ===== Telefon va planshet ===== */
+html, body { height: 100%; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+body { padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+html.touch .glass.hoverable:hover { transform: none; }
+html.touch .app, html.touch body { user-select: none; -webkit-user-select: none; }
+html.touch input, html.touch select { -webkit-user-select: text; user-select: text; font-size: 16px; }
+
+@media (max-width: 820px) {
+  .app { flex-direction: column; height: 100dvh; padding: 10px 10px 0; gap: 10px; }
+  .main { order: 1; flex: 1; min-height: 0; }
+  .sidebar {
+    order: 2; width: auto; flex-direction: row; justify-content: space-around; align-items: center;
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); gap: 2px; border-radius: 22px 22px 0 0;
+    margin: 0 -10px; border-left: 0; border-right: 0; border-bottom: 0;
+  }
+  .brand, .nav-spacer, .mini-now { display: none; }
+  .nav-btn { flex-direction: column; gap: 3px; padding: 8px 2px; font-size: 10px; text-align: center; justify-content: center; border-radius: 14px; flex: 1; min-width: 0; white-space: nowrap; }
+  .nav-btn:hover { transform: none; }
+  .nav-btn svg { width: 22px; height: 22px; }
+
+  h1 { font-size: 26px; }
+  .page { padding: 2px 2px 20px; }
+  .g-4 { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .g-2 { grid-template-columns: 1fr; }
+  .card { padding: 16px; }
+  .stat .num { font-size: 28px; }
+
+  .focus-wrap { grid-template-columns: 1fr; height: auto; }
+  .ring-box { width: min(78vw, 320px); height: min(78vw, 320px); }
+  .time-big { font-size: 54px; }
+  .timer-card { padding: 18px; }
+  .settings { grid-template-columns: 1fr; }
+  .playlist { max-height: 200px; }
+  .toast { bottom: calc(90px + env(safe-area-inset-bottom)); max-width: 90vw; }
+  .btn, .nav-btn { min-height: 44px; }
+  .focus-wrap > *, .grid > *, .main, .page { min-width: 0; max-width: 100%; }
+  .focus-wrap { width: 100%; }
+  .timer-card, .player { overflow: hidden; }
+  .custom-row { flex-wrap: wrap; justify-content: center; }
+  .row-set { flex-wrap: wrap; gap: 8px 12px; }
+  .row-set input[type=range] { width: 100%; }
+  .presets { gap: 6px; }
+  .task-form { grid-template-columns: 1fr 90px; }
+  .task-form #tName { grid-column: 1 / -1; }
+  .task-form .btn { min-width: 0; }
+  .btn.round { min-width: 44px; }
+}
+@media (max-width: 820px) and (orientation: landscape) {
+  .sidebar { display: none; }
+  .app { padding-bottom: 0; }
+}
