@@ -1,0 +1,8 @@
+{
+  "appId": "uz.orbit.focus",
+  "appName": "Orbit Focus",
+  "webDir": "www",
+  "backgroundColor": "#05060f",
+  "ios": { "contentInset": "never" },
+  "android": { "allowMixedContent": false }
+}
